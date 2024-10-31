@@ -1,0 +1,190 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; /* Updated font for a modern look */
+}
+
+/* Body Background */
+body {
+    background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+    color: #e0e0e0;
+}
+
+/* Container Layout */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    padding-top: 100px; /* Adds space for the nav bar */
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation */
+}
+
+/* Centering the Navigation */
+nav {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Adjusting the Menu Items */
+.menu {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #d4af37;
+}
+
+/* Left Panel */
+.left-panel {
+    width: 65%;
+    color: #e0e0e0;
+    padding: 25px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    line-height: 1.8; /* Improved line spacing for readability */
+    background-color: rgba(26, 26, 26, 0.9); /* Subtle background color */
+    border-radius: 10px;
+}
+
+.left-panel h1 {
+    color: #d4af37;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.left-panel h2 {
+    color: #c0c0c0;
+    font-size: 1.8em;
+    margin: 20px 0 10px;
+}
+
+.left-panel h3, .left-panel h4 {
+    color: #e0e0e0;
+    margin: 15px 0;
+}
+
+.left-panel p {
+    margin: 10px 0;
+}
+
+.left-panel ul {
+    list-style-type: disc;
+    margin: 10px 20px;
+}
+
+.left-panel li {
+    margin: 5px 0;
+}
+
+/* Hover Effects for Headers */
+.left-panel h1:hover, .left-panel h2:hover {
+    color: #d4af37;
+    transition: color 0.3s;
+}
+
+/* Separator Line */
+hr {
+    border: none;
+    border-top: 2px solid #555;
+    margin: 15px 0;
+}
+
+/* Button */
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #d4af37;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: transform 0.2s;
+}
+
+.button:hover {
+    background-color: #e0e0e0;
+    color: #000;
+    transform: scale(1.05); /* Adds a slight zoom effect on hover */
+}
+
+.right-panel {
+    width: 30%;
+    background-color: #333;
+    padding: 25px;
+    border-radius: 10px;
+    color: #c0c0c0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.right-panel-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #c0c0c0;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #d4af37;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #e0e0e0;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-panel, .right-panel {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    nav {
+        width: 90%;
+    }
+}
+

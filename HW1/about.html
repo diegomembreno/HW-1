@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum - NO 9-5 TRADERS</title>
+    <link rel="stylesheet" href="css/forum.css" type="text/css" />
+</head>
+<body>
+    <div class="forum-container">
+        <div class="forum-welcome">
+            <div class="welcome-text">
+                <h1>Trading Forum</h1>
+                <p>Welcome to the forum! Discuss strategies, ask questions, and share insights about trading. This is a space for both beginners and experienced traders to connect.</p>
+            </div>
+        </div>
+
+        <!-- New Post Section -->
+        <div class="new-post">
+            <h2>Create a New Post</h2>
+            <form id="new-post-form">
+                <input type="text" placeholder="Post Title" required>
+                <textarea placeholder="What's on your mind?" required></textarea>
+                <button type="submit" class="button">Post</button>
+            </form>
+        </div>
+
+        <!-- Discussion Threads -->
+        <div class="forum-threads">
+            <h2>Recent Discussions</h2>
+            <div class="thread">
+                <h3>Best Trading Strategies for Beginners</h3>
+                <p>Posted by User123 | 10 comments</p>
+                <a href="#" class="button">Join Discussion</a>
+            </div>
+
+            <div class="thread">
+                <h3>Latest News in Cryptocurrency</h3>
+                <p>Posted by CryptoGuru | 5 comments</p>
+                <a href="#" class="button">Join Discussion</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('new-post-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const title = event.target[0].value;
+            const content = event.target[1].value;
+
+            const thread = document.createElement('div');
+            thread.className = 'thread';
+            thread.innerHTML = `
+                <h3>${title}</h3>
+                <p>${content} | 0 comments</p>
+                <a href="#" class="button">Join Discussion</a>
+            `;
+
+            document.querySelector('.forum-threads').appendChild(thread);
+            event.target.reset();
+        });
+    </script>
+</body>
+</html>
+
